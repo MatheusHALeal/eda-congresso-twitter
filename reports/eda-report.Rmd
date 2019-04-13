@@ -27,7 +27,7 @@ opts_chunk$set(echo = TRUE,
 opts_knit$set(width = 75)
 ```
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE}
 library(tidyverse)
 source(here::here("code/lib.R"))
 theme_set(theme_bw())
