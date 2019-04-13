@@ -1,0 +1,55 @@
+---
+title: "Tweets dos congressitas brasileiros em 2019"
+date: "`r Sys.Date()`"
+author: Mariana Marques, Mariana Mendes e Matheus Leal
+output:
+  rmdformats::readthedown:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+---
+
+```{r knitr_init, echo=FALSE, results="asis", cache=FALSE}
+library(knitr)
+library(rmdformats)
+library(DT)
+## Global options
+options(max.print = "75")
+opts_chunk$set(echo = TRUE,
+	             cache = FALSE,
+               prompt = FALSE,
+               tidy = FALSE,
+               comment = NA,
+               message = FALSE,
+               warning = FALSE)
+opts_knit$set(width = 75)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+source(here::here("code/lib.R"))
+theme_set(theme_bw())
+```
+Nesta análise iremos explorar dados sobre as contas do Twitter de nossos representantes federais em 2019. Os dados brutos têm 72.316 tweets cuja data de criação segundo a API é em 2019. Esses tweets foram coletados em 22 de março de 2019.
+
+Primeiro vamos carregador nosso dados:
+```{r read}
+atividade = read_projectdata()
+```
+
+
+Inicialmente queremos analisar se existe e qual a relação entre número de seguidores, engajamento e atividade do parlamentar.
+
+##1. Pergunta 1?
+
+Agora queremos saber se os parlamentares que mais se destacaram e/ou foram “pontos fora da curva” são tão influentes quanto um partido inteiro.
+
+##2. As personalidades de destaque conseguem ser mais influentes que um partido inteiro? 
+
+##3. Parlamentar em seu partido e parlamentar comparando com todos os partidos em geral.
+
+Queremos também analisar a visibilidade atribuída a cada região do país, a partir disso descobrir se existe algum estado que se sobressai e aumenta a média de determinada região. 
+
+##4. Pergunta 4?
